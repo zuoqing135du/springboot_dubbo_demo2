@@ -17,6 +17,10 @@ public class LoginController {
     @Autowired
     LoginConsumerService loginService;
 
+    @RequestMapping(value = "selectMenu")
+    public Object selectMenu(){
+        return loginService.selectMenu();
+    }
 
     @RequestMapping(value = "login")
     public Object login(){
