@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.zuoqing.base.dao"}, sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(basePackages = {"com.zuoqing.base.dao"})
 public class ServiceApplication {
 
 	public static void main(String[] args) {

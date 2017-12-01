@@ -27,7 +27,7 @@
         </javaModelGenerator>
 
         <!-- *Mapper.xml 文件的位置 -->
-        <sqlMapGenerator targetPackage="com.zuoqing.base.mapper" targetProject="C:\houtai\demo2\base\src\main\java">
+        <sqlMapGenerator targetPackage="mapper" targetProject="C:\houtai\demo2\base\src\main\resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
@@ -38,7 +38,7 @@
 
         <!-- 相关表的配置 -->
         <!--tableName="u_user%"-->
-        <table tableName="menu" domainObjectName="Menu"
+        <table tableName="girl" domainObjectName="Girl"
                enableCountByExample="true"
                enableDeleteByExample="true"
                enableSelectByExample="true"
