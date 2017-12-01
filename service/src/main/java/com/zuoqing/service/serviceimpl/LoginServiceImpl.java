@@ -4,9 +4,12 @@ package com.zuoqing.service.serviceimpl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.zuoqing.base.LoginService;
 import com.zuoqing.base.dao.MenuMapper;
+import com.zuoqing.base.entity.Menu;
 import com.zuoqing.base.entity.MenuExample;
 import com.zuoqing.base.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * Created by zuoqing on 2017/11/22.
@@ -16,6 +19,16 @@ public class LoginServiceImpl implements LoginService {
 
     @Autowired
     MenuMapper menuDao;
+
+    @Override
+    public List<Menu> selectMenu() {
+        System.out.print("1111111111111111111114");
+        MenuExample example = new MenuExample();
+        System.err.print(menuDao.select(example).size());
+        System.out.print("4111111111111111111111"+"服务器2");
+        example.setOrderByClause("qwer");
+        return menuDao.select(example);
+    }
 
     @Override
     public String login() {

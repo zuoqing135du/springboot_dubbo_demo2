@@ -3,8 +3,11 @@ package com.zuoqing.web.controller;
 import com.zuoqing.base.entity.User;
 import com.zuoqing.web.service.LoginConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
 /**
@@ -13,10 +16,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "login")
 public class LoginController {
+    @Autowired
+    protected RedisTemplate<String,Object> redisTemplate;
 
     @Autowired
     LoginConsumerService loginService;
 
+    @RequestMapping(value = "selectMenu")
+    public Object selectMenu(){
+        return loginService.selectMenu();
+    }
+
+    @RequestMapping(value = "selectMenuByRedis")
+    public Object selectMenuByRedis(){
+        List list = (List)redisTemplate.opsForValue().get("gymList");
+        if(list==null){
+            list = loginService.selectMenu();
+            redisTemplate.opsForValue().set("gymList",list);
+        }
+        return list;
+    }
 
     @RequestMapping(value = "login")
     public Object login(){
