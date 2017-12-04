@@ -1,4 +1,7 @@
+/Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/config/HelloReceiver.java
 /Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/config/RedisCacheConfig.java
 /Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/controller/LoginController.java
+/Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/config/HelloSender.java
+/Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/controller/RabbitTest.java
 /Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/WebApplication.java
 /Users/gaomin/Documents/GitHub/springboot_dubbo_demo2/web/src/main/java/com/zuoqing/web/service/LoginConsumerService.java
